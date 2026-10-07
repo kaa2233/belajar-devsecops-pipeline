@@ -51,6 +51,24 @@ def index():
     )
 
 
+@app.route("/about")
+def about():
+    """Menampilkan halaman informasi aplikasi."""
+    return (
+        "<h1>Tentang Aplikasi</h1>"
+        "<p>Ini adalah aplikasi Flask untuk praktikum CI/CD.</p>"
+    )
+
+
+@app.route("/hello")
+def hello():
+    """Menampilkan pesan sederhana."""
+    return (
+        "<h1>Hello!</h1>"
+        "<p>Route baru berhasil di-deploy melalui CI/CD.</p>"
+    )
+
+
 if __name__ == "__main__":
     init_db()
     app.run(host="0.0.0.0", port=5000)  # nosemgrep
